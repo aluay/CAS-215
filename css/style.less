@@ -1,0 +1,217 @@
+@import 'palette.less';
+@import 'mixins.less';
+
+/* MOBILE STYLESHEET */
+
+html {
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-color: @lightColor1;
+}
+
+a {
+    &:link {
+        color: @darkColor;
+    }
+
+    &:visited {
+        color: @color5;
+    }
+}
+
+header {
+    background-color: @lightColor1;
+
+    h1 {
+        color: @darkColor4;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0.5em 0;
+    }
+}
+
+main {
+    padding: 1em;
+
+    h1 {
+        .headingStyle(@darkColor3; 1.8em);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    h2 {
+        .headingStyle(@darkColor3; 1.4em);
+        font-weight: bold;
+    }
+
+    h3 {
+        .headingStyle(@darkColor3; 1.1em);
+        font-weight: bold;
+    }
+
+    h4 {
+        .headingStyle(@darkColor3; .9em);
+        font-weight: bold;
+    }
+
+    h5 {
+        .headingStyle(@darkColor3; .85em);
+        font-weight: bold;
+    }
+
+    h6 {
+        .headingStyle(@darkColor3; .75em);
+        font-weight: bold;
+    }
+
+    a {
+        &:link {
+            color: @darkColor4;
+        }
+
+        &:visited {
+            color: @darkColor4;
+        }
+    }
+
+    figcaption {
+        font-size: 0.9em;
+        padding-bottom: 0.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+nav {
+    padding: 1em;
+    color: @color1;
+    background-color: @darkColor5;
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+
+    li {
+        line-height: 1.5em;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+pre {
+    font-family: "Courier New", monospace;
+    white-space: pre-wrap;
+}
+
+img {
+    .imgBorder;
+}
+
+footer {
+    padding: 1em;
+
+    h1,
+    h2,
+    h3 {
+        color: @darkColor;
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .footerBackground(right, @color2, @color1);
+}
+
+/*****************************************
+    The CSS below is to make navigational 
+    elements better for mobile devices.
+******************************************/
+
+nav {
+    ul {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    li {
+        list-style-type: none;
+        text-align: center;
+        padding: 0.3em 0 0.3em 0;
+        margin-bottom: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        display: block;
+        height: 30px;
+        text-align: center;
+        .navLinksStyle(5px, @color2)
+    }
+}
+
+/*************************************
+    End of navigational elements CSS
+**************************************/
+
+/*
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        ul {
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            padding: 1em;
+            padding-right: 1em;
+        }
+
+        a {
+            display: inline;
+            padding: 0.5em 0.7em;
+        }
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+
+    header,
+    main,
+    footer {
+        padding: 2em;
+    }
+}
